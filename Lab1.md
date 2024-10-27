@@ -81,10 +81,16 @@
 - **Ngân hàng**: Xử lý thanh toán qua chuyển khoản.
 
 ### Biểu đồ Sequence:
-![Diagram] (https://www.planttext.com/api/plantuml/png/T98nQiD044LxdM8ku0ke22Ofui8O0Y8uvKOntWLbf2YpXqddJOg0GU32bOH9CU1xx0boXSpQmRBmkfx_t_m_p6_tCtudLPDzBHALKrd3JFCdFXfUOrB9mEIcKaXmwxkFkU-QAU-c-ytUuN8mVh2-_K8PPbgXpafsG_jiATG9hyIMz1jWT1C1f_34QmkvRxyj43UeeVXVUIaEYCZo5Ev5Pe0qRqL41a-CY3f0-eGfX1LGy4xi8W4wQDwi0WmYq8SUlG56rqBCsUM0shSDdhFY6QuSuqxSrH52GBLlGslfvSm06JjDg7KwTWhPyHZFx4hGfIGFc5KWd7762tm9t_07003__mC0)
-
+![Diagram](https://www.planttext.com/api/plantuml/png/T98nQiD044LxdM8ku0ke22Ofui8O0Y8uvKOntWLbf2YpXqddJOg0GU32bOH9CU1xx0boXSpQmRBmkfx_t_m_p6_tCtudLPDzBHALKrd3JFCdFXfUOrB9mEIcKaXmwxkFkU-QAU-c-ytUuN8mVh2-_K8PPbgXpafsG_jiATG9hyIMz1jWT1C1f_34QmkvRxyj43UeeVXVUIaEYCZo5Ev5Pe0qRqL41a-CY3f0-eGfX1LGy4xi8W4wQDwi0WmYq8SUlG56rqBCsUM0shSDdhFY6QuSuqxSrH52GBLlGslfvSm06JjDg7KwTWhPyHZFx4hGfIGFc5KWd7762tm9t_07003__mC0)
 ### Biểu đồ phân tích:
-![Diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9Vnk55UM6PXrVbALHpAIWeb01P8Fh8n8UxknCLaZCUxku4yGioZcqujZ0lFGGei38v92CnBoCa__32FAvQBgX9JWztpunuk7kjp-6zFX2rC1FNvcL0HJGGrcaYT0QMFjorE0-e3s4iH6i5n3Y4C7RzVkb0GO_32s0sGhKvPvHMFjpTdEUTaGyo7rqlaizrTUsmE9yBYuz0Ah4ubmkR5q1g4KxZSaZDIm65Em000F__0m00)(https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9Vnk55UM6PXrVbALHpAIWeb01P8Fh8n8UxknCLaZCUxku4yGioZcqujZ0lFGGei38v92CnBoCa__32FAvQBgX9JWztpunuk7kjp-6zFX2rC1FNvcL0HJGGrcaYT0QMFjorE0-e3s4iH6i5n3Y4C7RzVkb0GO_32s0sGhKvPvHMFjpTdEUTaGyo7rqlaizrTUsmE9yBYuz0Ah4ubmkR5q1g4KxZSaZDIm65Em000F__0m00)
+![Diagram](https://www.planttext.com/api/plantuml/png/UhzxFvT3SKbYKKbfRWvNSavYSR62NyRXHNbXcOTNvIbKSoaeA9G0MI3woCI7kxiJ5P8p7kxk1F4BCevjEBOmBpq4AB0oEIGZCIyZ9F_mmZokMYweIKuFTy-CUBXxhS_XlJuGjJ0Jr-PbG4Kq4DPf8dG6bZxSjJWFg0zXB4Hh1SGuX31s_NxfG46FmmjWDaArEMUKLZxStPpddP4FCXzTBvBFTNNji3YV2ukFG2gnE9SBcnT0QX5Eut98pKi1XZi0003__mC0)
+
+### Giải thích:
+- **Nhân viên**: Đảm nhận việc lưu trữ thông tin cá nhân và lựa chọn phương thức thanh toán.
+- **Bộ xử lý lương**: Thực hiện tính toán lương cho nhân viên dựa trên thông tin từ lớp Nhân viên.
+- **Quản lý thanh toán**: Chịu trách nhiệm xử lý và gửi các khoản thanh toán cho nhân viên.
+- **Ngân hàng**: Xử lý các giao dịch thanh toán qua chuyển khoản, cung cấp xác nhận về giao dịch.
+
 ## 4. Phân tích ca sử dụng "Maintain Timecard"
 
 ### Lớp phân tích:
@@ -97,6 +103,10 @@
 ### Biểu đồ phân tích:
 ![Diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9Vnk55UM6PXrVbALHpAIWeb01P83ep1SpBp4rDJYnAuQhbWgeFB7suQt6Up-6z8L0fgBQCmwjoOK8Q24CrGP8v3tSjhSGg2JVMwU7kcH4FTwy56knpRCEnXNdfCEUipSk0Yg3hH7AwhguTfikuCDqAKeTf5PT3QbuAA4W00000__y30000)
 
+### Giải thích:
+- **Nhân viên**: Có trách nhiệm ghi nhận giờ làm việc hàng ngày và truyền thông tin đó đến lớp Quản lý Timecard.
+- **Dịch vụ timecard**: Lưu trữ và xử lý thông tin timecard của nhân viên, xác nhận lưu trữ thành công thông tin.
+- **Quản lý thời gian làm việc**: Sử dụng thông tin từ Quản lý Timecard để tính toán lương cho nhân viên.
 ---
 
 ## 5. Hợp nhất kết quả phân tích:
