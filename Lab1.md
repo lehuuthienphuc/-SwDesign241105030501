@@ -1,4 +1,4 @@
-# Tài Liệu Phân Tích Hệ Thống Bảng Lương
+# Tài Liệu Phân Tích Hệ Thống "Payroll System"
 
 ## 1. Phân Tích Kiến Trúc
 
