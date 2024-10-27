@@ -81,7 +81,7 @@
 - **Ngân hàng**: Xử lý thanh toán qua chuyển khoản.
 
 ### Biểu đồ Sequence:
- ![Diagram](https://www.planttext.com/api/plantuml/png/T98nQiD044LxdM8ku0ke22Ofui8O0Y8uvKOntWLbf2YpXqddJOg0GU32bOH9CU1xx0boXSpQmRBmkfx_t_m_p6_tCtudLPDzBHALKrd3JFCdFXfUOrB9mEIcKaXmwxkFkU-QAU-c-ytUuN8mVh2-_K8PPbgXpafsG_jiATG9hyIMz1jWT1C1f_34QmkvRxyj43UeeVXVUIaEYCZo5Ev5Pe0qRqL41a-CY3f0-eGfX1LGy4xi8W4wQDwi0WmYq8SUlG56rqBCsUM0shSDdhFY6QuSuqxSrH52GBLlGslfvSm06JjDg7KwTWhPyHZFx4hGfIGFc5KWd7762tm9t_07003__mC0)
+  ![Diagram] (https://www.planttext.com/api/plantuml/png/T98nQiD044LxdM8ku0ke22Ofui8O0Y8uvKOntWLbf2YpXqddJOg0GU32bOH9CU1xx0boXSpQmRBmkfx_t_m_p6_tCtudLPDzBHALKrd3JFCdFXfUOrB9mEIcKaXmwxkFkU-QAU-c-ytUuN8mVh2-_K8PPbgXpafsG_jiATG9hyIMz1jWT1C1f_34QmkvRxyj43UeeVXVUIaEYCZo5Ev5Pe0qRqL41a-CY3f0-eGfX1LGy4xi8W4wQDwi0WmYq8SUlG56rqBCsUM0shSDdhFY6QuSuqxSrH52GBLlGslfvSm06JjDg7KwTWhPyHZFx4hGfIGFc5KWd7762tm9t_07003__mC0)
 
 ### Biểu đồ phân tích:
 ![Diagram]
@@ -102,8 +102,7 @@
 
 ## 5. Hợp nhất kết quả phân tích:
 ### Biểu đồ tổng hợp:
-![Diagram]
-(https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9Vnk55UM6PXrVbALHpAIWeb01P8Fh8n8UxknCLaZCUxku4yGioZcqujZ0lFGGei38v92CnBoCa__12iDgIpDpKvCIY5AvQBgYfJWztpunuk7kjp-6zFX1zCDFNvcL0HJGGLciYT0QMFjorE0-e3s45H6i5n3Y4C27zK4T1BSuul2eN9eIY4oYPyt3Nqagiad1Z_TA1WXw75y0y0dMDSqPfvSFTpNdU6VaWQz7r8WMkhguTbb11Lu7XUYui8Ocg414Js88Ef1RXTYw7rBmKKDm30000__y30000)
+  ![Diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bToJc9niO9Vnk55UM6PXrVbALHpAIWeb01P8Fh8n8UxknCLaZCUxku4yGioZcqujZ0lFGGei38v92CnBoCa__12iDgIpDpKvCIY5AvQBgYfJWztpunuk7kjp-6zFX1zCDFNvcL0HJGGLciYT0QMFjorE0-e3s45H6i5n3Y4C27zK4T1BSuul2eN9eIY4oYPyt3Nqagiad1Z_TA1WXw75y0y0dMDSqPfvSFTpNdU6VaWQz7r8WMkhguTbb11Lu7XUYui8Ocg414Js88Ef1RXTYw7rBmKKDm30000__y30000)
 ### Tổng kết
 Hệ thống bảng lương của Acme, Inc. đã được phân tích và thiết kế dựa trên các yêu cầu cụ thể của công ty. Các cơ chế và kiến trúc được đề xuất sẽ đảm bảo rằng hệ thống có thể hoạt động hiệu quả, linh hoạt, và dễ dàng tích hợp với các hệ thống hiện có.
 
