@@ -1,53 +1,70 @@
-1.Subsystem context diagrams
-BankSystem:
-biểu đồ ngữ cảnh: ![diagram](https://www.planttext.com/api/plantuml/png/h591JiCm4Bpx5QjUQ2NImhMoeWguz8RW1IRPA5OTE_8wY0Xu6GUUn1U8uxPnqXphY-trpkpChlz-VdVaX7LDfTWDF64XDSApQArHwj5evtUq80W4PE7ECYM8Pf8uFsQaANmowDPc0xRHK8VKvOfziw6Ar0vj8JA4_OFGXzUM75PiDdgaox4s9DrITBMp4hC3RE5qlFLynaEweD_skZ2s4auQFQuRqVQsg7cZSAsj-MZ1bSA1h6g55Mf78tN1UiJ0-GH-zduTiMUmbwgX4oHTEqmWl74UucawiHdHpX5CKZpu1LL_fbBMn2vdlBXRh-yNa2JfQ3vRoAN5p9rS4_JA2DwbO74Y_qgIg7-ZDqyQDUkYWKFNLXUugPKTwjp_wNy0003__mC0)
+# Documentation: Subsystem Context Diagrams, Analysis, and Architectural Layers
 
-Giải thích các mối quan hệ trong biểu đồ
-PayrollController --> IBankSystem: PayrollController có mối quan hệ phụ thuộc với IBankSystem để thực hiện việc kiểm tra và gửi phiếu lương trực tiếp qua hệ thống ngân hàng (direct deposits checks via).
-IBankSystem <|-- BankSystem: BankSystem kế thừa giao diện IBankSystem và hiện thực phương thức deposit.
-IBankSystem o-- Paycheck: IBankSystem có mối quan hệ kết hợp với Paycheck, vì nó cần truy cập thông tin phiếu lương để thực hiện giao dịch.
-IBankSystem o-- BankInformation: IBankSystem có mối quan hệ kết hợp với BankInformation, vì nó cần thông tin tài khoản ngân hàng để thực hiện gửi phiếu lương vào đúng tài khoản.
+## 1. Subsystem Context Diagrams
 
-PrintService:
-biểu đồ ngữ cảnh: ![diagram](https://www.planttext.com/api/plantuml/png/d5512i8m4BplA_QeO3zGGYbuyYRwWbXN2BH9sMoBehxCWq_o2wQ9WYqzUTeiCpipktazdgKNpT8rDLIrzXwtRAoidHLsTKsCIbMfAGgy0c8xu3jg7SjY2NU0q1AVT4MuYRDxujw4RahMgUQOwWh5HJvnZf_7nfuSDrgCir7w9z5NLIdV7Vp52pL1tPqlCx7-Tahyu45MZ2JfSOpH9C3qM5bMJAwGuz4mLP82UkHeuR4t6iPCTSkoqQum8RY0fuGpm5owaknn-DWt0000__y30000)
+### BankSystem
 
-Giải thích mối quan hệ
-PrintController --> IPrintService: PrintController phụ thuộc vào IPrintService để thực hiện in báo cáo.
-IPrintService <|-- PrintService: PrintService kế thừa IPrintService và hiện thực phương thức printReport.
-IPrintService o-- Report: IPrintService có mối quan hệ kết hợp với Report vì cần truy cập nội dung của báo cáo khi in.
-IPrintService o-- PrinterInformation: IPrintService có mối quan hệ kết hợp với PrinterInformation để biết máy in nào sẽ được sử dụng để in báo cáo.
+**Biểu đồ ngữ cảnh**  
+![BankSystem Diagram](https://www.planttext.com/api/plantuml/png/h591JiCm4Bpx5QjUQ2NImhMoeWguz8RW1IRPA5OTE_8wY0Xu6GUUn1U8uxPnqXphY-trpkpChlz-VdVaX7LDfTWDF64XDSApQArHwj5evtUq80W4PE7ECYM8Pf8uFsQaANmowDPc0xRHK8VKvOfziw6Ar0vj8JA4_OFGXzUM75PiDdgaox4s9DrITBMp4hC3RE5qlFLynaEweD_skZ2s4auQFQuRqVQsg7cZSAsj-MZ1bSA1h6g55Mf78tN1UiJ0-GH-zduTiMUmbwgX4oHTEqmWl74UucawiHdHpX5CKZpu1LL_fbBMn2vdlBXRh-yNa2JfQ3vRoAN5p9rS4_JA2DwbO74Y_qgIg7-ZDqyQDUkYWKFNLXUugPKTwjp_wNy0003__mC0)
 
-ProjectManagementDatabase subsystems
-biểu đồ ngữ cảnh:![diagram](https://www.planttext.com/api/plantuml/png/r5D1JiCm4BplA_O84lb05KKLoeK3g5B40xRs4XavJkNTW2BeopZm9Bw0qmO4hOkGE76rPqOpixjlBwzBKOewT1x0U1B15OsnzxuPHRd3iZHzqFHGLVW4Y8Qy6JmfD-GfZcURsD-pqHlgU86DHXVQSzW2kA0SxyWmNgtsa6iAr7B7GUlBdLJBEd_LhEIyvCKGoTePc4DSeDtJlrA6ZKqUVsG5VgmFYTlF4euyazAQX5CXCgnbLyvSoR_94PFv5CNfE3l_g_gj76loDFYFFb9fluoQDBylNb5K-TLP81d38YoOt1C-E88ii7mkYjE3X3ofF-J4qxWfFi2IWvtEvnq00F__0m00)
+**Giải thích các mối quan hệ**:
+- `PayrollController --> IBankSystem`: Kết nối để gửi phiếu lương qua ngân hàng.
+- `IBankSystem <|-- BankSystem`: `BankSystem` kế thừa và hiện thực giao diện `IBankSystem`.
+- `IBankSystem o-- Paycheck`: Kết hợp với `Paycheck` để xử lý phiếu lương.
+- `IBankSystem o-- BankInformation`: Kết hợp với `BankInformation` để sử dụng thông tin tài khoản.
 
-Giải thích:
-PayrollSystem: Lớp điều khiển (<<control>>) tính toán lương bằng cách truy xuất dữ liệu từ ProjectManagementDatabase.
-IProjectManagementDB: Giao diện định nghĩa các phương thức truy xuất và cập nhật dữ liệu trong ProjectManagementDatabase.
-ProjectManagementDatabase: Lớp con (<<subsystem>>) thực hiện các hành động quản lý dữ liệu dự án.
-ProjectManager và User: Các thực thể (<<entity>>) có thể tương tác với hệ thống ProjectManagementDatabase để cập nhật và nhập liệu.
+---
 
-2.Analysis class to design element map
+### PrintService
+
+**Biểu đồ ngữ cảnh**  
+![PrintService Diagram](https://www.planttext.com/api/plantuml/png/d5512i8m4BplA_QeO3zGGYbuyYRwWbXN2BH9sMoBehxCWq_o2wQ9WYqzUTeiCpipktazdgKNpT8rDLIrzXwtRAoidHLsTKsCIbMfAGgy0c8xu3jg7SjY2NU0q1AVT4MuYRDxujw4RahMgUQOwWh5HJvnZf_7nfuSDrgCir7w9z5NLIdV7Vp52pL1tPqlCx7-Tahyu45MZ2JfSOpH9C3qM5bMJAwGuz4mLP82UkHeuR4t6iPCTSkoqQum8RY0fuGpm5owaknn-DWt0000__y30000)
+
+**Giải thích mối quan hệ**:
+- `PrintController --> IPrintService`: Kết nối để in báo cáo.
+- `IPrintService <|-- PrintService`: `PrintService` kế thừa `IPrintService` để hiện thực phương thức in.
+- `IPrintService o-- Report`: Kết hợp với `Report` để sử dụng nội dung báo cáo.
+- `IPrintService o-- PrinterInformation`: Kết hợp với `PrinterInformation` để cấu hình máy in.
+
+---
+
+### ProjectManagementDatabase Subsystems
+
+**Biểu đồ ngữ cảnh**  
+![ProjectManagementDatabase Diagram](https://www.planttext.com/api/plantuml/png/r5D1JiCm4BplA_O84lb05KKLoeK3g5B40xRs4XavJkNTW2BeopZm9Bw0qmO4hOkGE76rPqOpixjlBwzBKOewT1x0U1B15OsnzxuPHRd3iZHzqFHGLVW4Y8Qy6JmfD-GfZcURsD-pqHlgU86DHXVQSzW2kA0SxyWmNgtsa6iAr7B7GUlBdLJBEd_LhEIyvCKGoTePc4DSeDtJlrA6ZKqUVsG5VgmFYTlF4euyazAQX5CXCgnbLyvSoR_94PFv5CNfE3l_g_gj76loDFYFFb9fluoQDBylNb5K-TLP81d38YoOt1C-E88ii7mkYjE3X3ofF-J4qxWfFi2IWvtEvnq00F__0m00)
+
+**Giải thích mối quan hệ**:
+- `PayrollSystem --> IProjectManagementDB`: Kết nối để truy cập dữ liệu dự án.
+- `IProjectManagementDB <|-- ProjectManagementDatabase`: `ProjectManagementDatabase` hiện thực giao diện.
+- `ProjectManager` và `User`: Tương tác với cơ sở dữ liệu qua giao diện.
+
+---
+
+## 2. Analysis Class to Design Element Map
 
 | **Lớp phân tích**              | **Lớp thiết kế**                            | **Chức năng trong thiết kế**                                         |
 |-------------------------------|--------------------------------------------|--------------------------------------------------------------------|
-| **PayrollSystem**              | `PayrollSystem`                            | Tính toán tiền lương dựa trên thông tin dự án từ **ProjectManagementDatabase** |
-| **IProjectManagementDB**       | `IProjectManagementDB`                     | Giao diện định nghĩa các phương thức để thao tác dữ liệu dự án    |
-| **ProjectManagementDatabase**  | `ProjectManagementDatabase`                | Lớp thực thi các phương thức truy xuất và lưu trữ dữ liệu dự án    |
-| **ProjectManager**             | `ProjectManager`                           | Quản lý và cập nhật thông tin dự án trong hệ thống                 |
-| **User**                       | `User`                                     | Nhập liệu thông tin dự án vào cơ sở dữ liệu                        |
+| **PayrollSystem**              | `PayrollSystem`                            | Tính toán tiền lương từ **ProjectManagementDatabase**               |
+| **IProjectManagementDB**       | `IProjectManagementDB`                     | Định nghĩa phương thức thao tác dữ liệu dự án                     |
+| **ProjectManagementDatabase**  | `ProjectManagementDatabase`                | Hiện thực thao tác truy xuất/lưu trữ dữ liệu dự án                |
+| **ProjectManager**             | `ProjectManager`                           | Quản lý thông tin dự án                                            |
+| **User**                       | `User`                                     | Nhập liệu dự án vào cơ sở dữ liệu                                  |
 
+---
 
-3.Design element to owning package map
+## 3. Design Element to Owning Package Map
 
 | **Phần tử thiết kế**            | **Gói chứa**                 | **Mô tả**                                                       |
 |---------------------------------|------------------------------|------------------------------------------------------------------|
-| **PayrollSystem**               | `com.acme.payroll`           | Tính toán tiền lương dựa trên thông tin từ **ProjectManagementDatabase** |
-| **IProjectManagementDB**        | `com.acme.database`          | Giao diện định nghĩa các phương thức để thao tác dữ liệu dự án |
-| **ProjectManagementDatabase**   | `com.acme.database`          | Thực thi các phương thức truy xuất và lưu trữ dữ liệu dự án    |
-| **ProjectManager**              | `com.acme.projectmanagement` | Quản lý và cập nhật thông tin dự án trong hệ thống             |
-| **User**                        | `com.acme.user`              | Nhập liệu thông tin dự án vào cơ sở dữ liệu                     |
+| **PayrollSystem**               | `com.acme.payroll`           | Tính toán lương, tích hợp **ProjectManagementDatabase**           |
+| **IProjectManagementDB**        | `com.acme.database`          | Giao diện thao tác dữ liệu dự án                                |
+| **ProjectManagementDatabase**   | `com.acme.database`          | Thực hiện lưu trữ và truy xuất dữ liệu dự án                    |
+| **ProjectManager**              | `com.acme.projectmanagement` | Quản lý dự án                                                  |
+| **User**                        | `com.acme.user`              | Nhập liệu dự án                                                |
 
+---
 
-4.Architectural layers and their dependencies
-![diagram](https://www.planttext.com/api/plantuml/png/R91B2i9038RtSuguquKNS24-4Q68Y3r0c8bse4xh95MAU38N7iahE2r5hPfT_Z_vydZSxYCMz58SKjKnjBEEO3EVRiUhHJG7dIApKczXxOd92OhDN8GbURWegCDOpbCiusMtroYUDDaJnKn-wV92Wd7zP4qA3jEOesnlTHkM-qm7frNnuYReJ5fZDtGiY7_0CnGSwmhGfkv9Aki5OZnH8uJ-tzFw_U6_9GTWdP17BGndAudwKrErVgyn0AmpOZ31WftF3agDo9dg-Ky0003__mC0)
+## 4. Architectural Layers and Their Dependencies
 
+**Biểu đồ kiến trúc và quan hệ phụ thuộc**  
+![Architectural Layers Diagram](https://www.planttext.com/api/plantuml/png/R91B2i9038RtSuguquKNS24-4Q68Y3r0c8bse4xh95MAU38N7iahE2r5hPfT_Z_vydZSxYCMz58SKjKnjBEEO3EVRiUhHJG7dIApKczXxOd92OhDN8GbURWegCDOpbCiusMtroYUDDaJnKn-wV92Wd7zP4qA3jEOesnlTHkM-qm7frNnuYReJ5fZDtGiY7_0CnGSwmhGfkv9Aki5OZnH8uJ-tzFw_U6_9GTWdP17BGndAudwKrErVgyn0AmpOZ31WftF3agDo9dg-Ky0003__mC0)
