@@ -137,11 +137,5 @@ Hệ thống được thiết kế theo mô hình **Microservices** hoặc **Mod
 3. **Database Layer**: Quản lý dữ liệu cho toàn bộ hệ thống.
 4. **External Systems**: Tích hợp ngân hàng và cơ sở dữ liệu DB2.
 
----
 
-## **Lý Do Thiết Kế**
-1. **Tính rõ ràng**: Các chức năng được chia nhỏ, giúp quản lý dễ dàng hơn.
-2. **Khả năng mở rộng**: Dễ dàng bổ sung hoặc chỉnh sửa các hệ thống con khi yêu cầu thay đổi.
-3. **Tính độc lập**: Hạn chế sự phụ thuộc giữa các hệ thống con, giúp giảm thiểu lỗi khi bảo trì.
-4. **Khả năng tích hợp**: Tích hợp linh hoạt với hệ thống hiện có (DB2, ngân hàng).
 
